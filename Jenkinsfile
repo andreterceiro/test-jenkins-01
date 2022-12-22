@@ -5,8 +5,8 @@ pipeline {
         stage('Hello') {
             steps {
                 echo 'Hello World'
-                ping 127.0.0.1 -c4
-                firefox
+                sh "ping 127.0.0.1 -c4"
+                sh "firefox"
             }
         }
     }
