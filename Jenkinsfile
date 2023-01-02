@@ -16,6 +16,9 @@ pipeline {
         stage("cat-teste.txt") {
             steps {
                 sh "cat teste.txt"
+                parameters {
+                    choice choices: ['Paper', 'Rock', 'Scissors'], name: 'Option'
+                }
             }
         }
     }
