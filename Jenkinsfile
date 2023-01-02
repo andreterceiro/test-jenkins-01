@@ -1,6 +1,10 @@
 pipeline {
     agent any
 
+    parameters {
+        choice choices: ['Paper', 'Rock', 'Scissors'], name: 'Option'
+    }
+
     stages {
         stage('Hello') {
             steps {
@@ -16,10 +20,13 @@ pipeline {
         stage("cat-teste.txt") {
             steps {
                 sh "cat teste.txt"
-                parameters {
-                    choice choices: ['Paper', 'Rock', 'Scissors'], name: 'Option'
-                }
             }
         }
+        stage("choice") {
+            steps {
+                sh "echo Choice: ${params.CHOICE}"
+            }
+        }
+
     }
 }
