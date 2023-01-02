@@ -24,7 +24,7 @@ pipeline {
         }
         stage("choice") {
             steps {
-                sh "echo Choice: ${params.Option}"
+                sh "echo Choice: ${params.Option.Choice}"
             }
         }
 
