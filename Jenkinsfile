@@ -22,11 +22,5 @@ pipeline {
                 sh "cat teste.txt"
             }
         }
-        stage("choice") {
-            steps {
-                sh "echo Choice: ${params.choice}"
-            }
-        }
-
     }
 }
