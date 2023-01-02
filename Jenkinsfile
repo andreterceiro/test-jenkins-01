@@ -24,7 +24,7 @@ pipeline {
         }
         stage("choice") {
             steps {
-                sh String("${params.Option}" == "Paper")
+                sh ((String)"${params.Option}" == "Paper")
             }
         }
 
